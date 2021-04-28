@@ -1,23 +1,26 @@
 <template>
   <div id="map"></div>
+  <view-trend></view-trend>
 </template>
 
 <script>
+//import ViewTrend from "@/view/ViewTrend";
 import AppColorGrad from "@/components/AppColorGrad";
 import 'element-plus/lib/theme-chalk/el-radio.css';
 import 'element-plus/lib/theme-chalk/el-radio-group.css';
 import L from "leaflet";
 import "@/m/fixleaflet";
 import "leaflet.chinatmsproviders";
+import ViewTrend from './ViewTrend.vue';
 
 const chroma = require('chroma-js');
 const theColorMap = [
-  'Spectral',
-  ['yellow', '008ae5'],
+  //'Spectral',
+  //['yellow', '008ae5'],
   ['yellow', 'red', 'black'],
-  ['yellow', 'navy'],
-  'YlGn',
-  'RdYlBu'
+  //['yellow', 'navy'],
+  // 'YlGn',
+  // 'RdYlBu'
 ];
 const ratio2ColorMap = [
   [0.00, 0.00],
@@ -45,11 +48,12 @@ export default {
       baseLayers: null,
       globalVaccineLayer: null,
       globalCovidLayer: null,
-      colorMap: 1,
+      colorMap: 0,
     };
   },
   components: {
     AppColorGrad,
+    ViewTrend
   },
   mounted() {
     this.chooseColorMap();
@@ -198,7 +202,7 @@ export default {
                   "</li>"
               )
           )
-      ).addTo(this.map);
+      )
       this.controlLayers.addOverlay(this.globalCovidLayer, '全球疫情图');
     },
 
