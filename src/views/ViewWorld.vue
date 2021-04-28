@@ -5,7 +5,7 @@
 
 <script>
 //import ViewTrend from "@/view/ViewTrend";
-import AppColorGrad from "@/components/AppColorGrad";
+//import AppColorGrad from "@/components/AppColorGrad";
 import 'element-plus/lib/theme-chalk/el-radio.css';
 import 'element-plus/lib/theme-chalk/el-radio-group.css';
 import L from "leaflet";
