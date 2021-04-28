@@ -52,7 +52,6 @@ export default {
     };
   },
   components: {
-    AppColorGrad,
     ViewTrend
   },
   mounted() {

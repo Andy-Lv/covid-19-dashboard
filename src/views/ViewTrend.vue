@@ -52,7 +52,7 @@ export default {
   methods: {
     initCharts: function () {
       let chartDom = document.getElementById('sortChart');
-      this.myChart = echarts.init(chartDom, 'dark');
+      this.myChart = echarts.init(chartDom);
       let tempChart = this.myChart;
 
       let typeOfData = 'Cases';
@@ -104,7 +104,7 @@ export default {
 
     initMiniCharts() {
       let chartDom = document.getElementById('miniCHarts');
-      let miniCharts = echarts.init(chartDom, 'dark');
+      let miniCharts = echarts.init(chartDom);
 
       let grids = [];
       let xAxes = [];
