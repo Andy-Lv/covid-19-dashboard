@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.github",
+    "\\.github\\workflows",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\components",
+    "\\src\\m",
+    "\\src\\router",
+    "\\src\\static",
+    "\\src\\static\\resource",
+    "\\src\\views"
+  ],
+  "SelectedNode": "\\src\\static\\resource",
+  "PreviewInSolutionExplorer": false
+}

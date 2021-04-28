@@ -1,11 +1,4 @@
 <template>
-    <span >疫苗接种率色阶： </span>
-    <el-radio-group v-model="colorMap" @change="changeColorMap">
-      <el-radio style="width: 100px" v-for="(c, i) in theColorMap"
-                :label="i" :key="i" >
-        <AppColorGrad :color-map="c"></AppColorGrad>
-      </el-radio>
-    </el-radio-group>
   <div id="map"></div>
 </template>
 
@@ -112,7 +105,6 @@ export default {
             metric: true,
             imperial: false,
           })
-          .addTo(this.map);
     },
 
     async addVaccineLayer() {
@@ -215,7 +207,7 @@ export default {
         // 全球疫苗图: this.globalVaccineLayer,
         // 全球疫情图: this.globalCovidLayer,
       };
-      this.controlLayers = L.control.layers(this.baseLayers, this.overlays).addTo(this.map);
+      this.controlLayers = L.control.layers(this.baseLayers, this.overlays)
     },
 
     onEachFeatureOfTopoLayer(feature, layer) {
